@@ -14,7 +14,7 @@ loop do
 		title = gets.chomp
 		puts "Rating: "
 		rating = gets.chomp.to_i
-		if movies[title.to_sym] = nil
+		if movies[title.to_sym].nil?
 			movies[title.to_sym] = rating
 		else
 			puts "#{title} already exists." 
@@ -22,12 +22,12 @@ loop do
 	when "update"
 		puts "Enter title to update"
 		title = gets.chomp.to_sym
-		if movies[title] = nil
+		if movies[title].nil?
 			puts "#{title} does not exist"
 		else
 			puts "enter new rating for #{title}: "
 			rating = gets.chomp.to_i
-			movies[title]  = rating
+			movies[title] = rating
 		end
     
 	when "display"
@@ -38,7 +38,7 @@ loop do
 	when "delete"
 		puts "enter movie to delete"
 		title = gets.chomp.to_sym
-		if movies[title] = nil
+		if movies[title].nil?
 			puts "no movie by that name"
 		else
 			movies.delete(title)
