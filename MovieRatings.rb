@@ -6,7 +6,7 @@ loop do
 
 	case choice
 	when "exit"
-		break
+		break 
 	when "help"
 		puts "add, update, display, delete, exit"
 	when "add"
